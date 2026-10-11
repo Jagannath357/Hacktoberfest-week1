@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --bg-app: #F8F7F0;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #EFEFE8;
+  --bg-card: #FFFFFF;
+  --text-primary: #102A20;
+  --text-secondary: #3B4D43;
+  --text-muted: #6B7C72;
+  --border-subtle: #D8DFD5;
+  --forest-deep: #173D2B;
+  --forest-pine: #102A20;
+  --leaf-green: #2E7D32;
+  --leaf-light: #7BAE70;
+  --soft-sage: #DCE8D5;
+  --warm-ivory: #F8F7F0;
+  --sunlight: #D9822B;
+  --sunlight-soft: #FDE8B3;
+  --stone-muted: #777F75;
+  --accent-glow: rgba(46, 125, 50, 0.15);
+}
+
+.dark {
+  --bg-app: #0B1912;
+  --bg-surface: #10241A;
+  --bg-subtle: #142F22;
+  --bg-card: #142F22;
+  --text-primary: #F8F7F0;
+  --text-secondary: #D4DDD5;
+  --text-muted: #9AAEA2;
+  --border-subtle: #1D4231;
+  --forest-deep: #1A4632;
+  --forest-pine: #102A20;
+  --leaf-green: #7BAE70;
+  --leaf-light: #9BC792;
+  --soft-sage: #214333;
+  --warm-ivory: #102A20;
+  --sunlight: #E8BE71;
+  --sunlight-soft: #44371C;
+  --stone-muted: #93A090;
+  --accent-glow: rgba(123, 174, 112, 0.2);
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  min-height: 100vh;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-subtle);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--leaf-light);
+}
+
+/* Focus rings for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--leaf-green);
+  outline-offset: 2px;
+}
+
+/* Print / outdoor high contrast styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+}
